@@ -1,5 +1,12 @@
 fun main(){
     println("Bem vindo ao Bytebank")
+    val conta = Conta()
+    conta.titular = "Jose"
+    println(conta.titular)
+    testaLaco()
+}
+
+private fun testaLaco() {
     val titular: String = "Alex"
     val numeroConta: Int = 1000
     var saldo = 0.0
@@ -11,6 +18,10 @@ fun main(){
     println("número da conta $numeroConta")
     println("saldo da conta $saldo")
 
+    testaCondicao(saldo)
+}
+
+fun testaCondicao(saldo: Double){
 
     when{
         saldo > 0.0 ->  println("conta é positiva")
